@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elias y Peña Abogados</title>
+    <title>Elias y Peña | Abogados > Inicio</title>
     <link rel="icon" href="https://abogados-elias-y-pena.github.io/Image2/logo.png" type="image/x-icon">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        .a1{
+            color: white;
         }
         body {
             font-family: Arial, sans-serif;
@@ -56,10 +59,9 @@
             border: 1px solid #ddd;
             padding: 20px;
             border-radius: 5px;
-            display: none;
-        }
+            display: none;
+        }
         .container-5 {
-            display: flex;
             justify-content: center; /* Centra horizontalmente */
             align-items: center; /* Centra verticalmente */
             height: 30vh; /* Altura del contenedor */
@@ -76,6 +78,12 @@
             color: #fff;
             padding: 1rem 0;
         }
+        /* Footer styles */
+        footer {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 1rem 0;
+        }
         nav {
             display: flex;
             justify-content: space-between;
@@ -88,22 +96,7 @@
             font-size: 1.5rem;
             font-weight: bold;
         }
-        .nav-links {
-            list-style: none;
-            display: flex;
-        }
-        .nav-links li {
-            margin-left: 1.5rem;
-        }
-        .nav-links a {
-            color: #fff;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .nav-links a:hover {
-            color: #ffd700;
-        }
-
+      
         /* Hero section styles */
         .hero {
             background-image: url('https://rlzjlxjvwdxqgxjjqxwg.supabase.co/storage/v1/object/public/images/lawyer-hero.jpg');
@@ -144,8 +137,10 @@
 
         /* Practice areas styles */
         .practice-areas {
-            padding: 4rem 0;
-            background-color: #f4f4f4;
+            display: block !important;
+            padding: 1rem 0;
+            border-top: 2px solid #dbdbdb;
+            border-bottom: 2px solid #dbdbdb;
         }
         .practice-areas h2 {
             text-align: center;
@@ -204,6 +199,22 @@
             text-align: center;
             margin-bottom: 2rem;
         }
+        .contact h3 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .contact h4 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .container-2 h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .contatc-form button {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
         .contact-form {
             max-width: 600px;
             margin: 0 auto;
@@ -239,27 +250,143 @@
             background-color: #e6c200;
         }
 
-        /* Footer styles */
-        footer {
-            background-color: #1a1a1a;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
+        .nav-links1 {
+            list-style: none;
+            display: flex;
         }
-
-        /* Responsive styles */
+        .nav-links1 li {
+            margin-left: 1.5rem;
+        }
+        .nav-links1 a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .nav-links1 a:hover {
+            color: #ffd700;
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+        .nav-links li {
+            margin-left: 1.5rem;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .nav-links a:hover {
+            color: #ffd700;
+        }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 0.5rem;
+        }
+        .hamburger-line {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 5px 0;
+            transition: all 0.3s ease-in-out;
+        }
+        #info-container {
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        #framework-name {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ac6100;
+            padding-bottom: 10px;
+        }
+        #framework-description {
+            font-size: 16px;
+            color: #34495e;
+            line-height: 1.6;
+        }
+        .framework-logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
         @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            .nav-links1 {
+                list-style: none;
+                display: list-item;
+            }
+            .nav-links1 li {
+                margin-left: 1.5rem;
+                margin-top: 0.5rem;
+            }
+            .nav-links1 a {
+                color: #fff;
+                text-decoration: none;
+                transition: color 0.3s ease;
+                border-left: 2px solid rgb(129, 129, 129);
+                padding-left: 5px;
+            }
+            .nav-links1 a:hover {
+                color: #ffd700;
+                border-left: 2px solid #ffd700;
+                padding-left: 5px;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: #1a1a1a;
+                padding: 1rem;
+            }
+            .nav-links.show {
+                display: flex;
+            }
+            .nav-links li {
+                margin: 1rem 0;
+            }
+            .hamburger.active .hamburger-line:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            .hamburger.active .hamburger-line:nth-child(2) {
+                opacity: 0;
+            }
+            .hamburger.active .hamburger-line:nth-child(3) {
+                transform: rotate(-45deg) translate(5px, -5px);
+            }
             .nav-links {
                 display: none;
             }
             .about-content {
                 flex-direction: column;
             }
+            .hero{
+                margin-top: 70px; /* Espacio hacia arriba */
+                margin-bottom: 70px; /* Espacio hacia abajo */
+            }
             .hero h1 {
                 font-size: 2rem;
             }
             .hero p {
                 font-size: 1rem;
+            }
+            #framework-name {
+                font-size: 24px;
+            }
+            #framework-description {
+                font-size: 18px;
             }
         }
     </style>
@@ -272,6 +399,11 @@
                     <div class="logo">
                         <img src="https://abogados-elias-y-pena.github.io/Image2/logo.png" alt="logo" width="75" height="75">
                     </div>
+                    <button class="hamburger" aria-label="Menú de navegación">
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                        <span class="hamburger-line"></span>
+                    </button>
                     <ul class="nav-links">
                         <li><a href="#home">Inicio</a></li>
                         <li><a href="#practice-areas">Areas Especializadas</a></li>
@@ -282,7 +414,7 @@
             </header>    
         </section>
         <main>
-        
+          
         <section id="home" class="hero">
             <div class="container">
                 <div class="hero-content">
@@ -292,66 +424,66 @@
                 </div>
             </div>
         </section>
-        
+          
         <section id="practice-areas" class="practice-areas">
-            <div class="container-4">
-                <h2>Áreas Especializadas</h2>
-                    <select id="fruitSelect">
-                        <option value="">Selecciona una área</option>
-                        <option value="manzana">Área 1</option>
-                        <option value="banana">Área 2</option>
-                        <option value="naranja">Área 3</option>
-                        <option value="fresa">Área 4</option>
-                    </select>
-        
-                <div id="manzanaContainer" class="container-5" style="display: none;">
-                    <div class="area-card">
-                        <h3>Área 1</h3>
-                        <p>Poner lo que sea</p>
-                    </div>
-                </div>
-   
-                <div id="bananaContainer" class="container-5" style="display: none;">
-                    <div class="area-card">
-                        <h3>Área 2</h3>
-                        <p>Poner lo que sea</p>
-                    </div>
-                </div>
- 
-                <div id="naranjaContainer" class="container-5" style="display: none;">  
-                    <div class="area-card">
-                        <h3>Área 3</h3>
-                        <p>Poner lo que sea</p>
-                    </div>
-                </div>
+            <div class="container">
+              <h2>Áreas Especializadas</h2>
+        <label for="framework-select"></label>
+        <select id="framework-select">
+            <option value="">Selecciona una Área</option>
+            <option value="react">Área 1</option>
+            <option value="vue">Área 2</option>
+            <option value="angular">Área 3</option>
+            <option value="svelte">Área 4</option>
+        </select>
+        <div id="info-container" style="display: none;">
+            <h2 id="framework-name"></h2>
+            <p id="framework-description"></p>
+        </div>
+    </div>
 
-                <div id="fresaContainer" class="container-5" style="display: none;">
-                    <div class="area-card">
-                        <h3>Área 4</h3>
-                        <p>Poner lo que sea</p>
-                    </div>
-                </div>
+    <script>
+        const select = document.getElementById('framework-select');
+        const infoContainer = document.getElementById('info-container');
+        const frameworkName = document.getElementById('framework-name');
+        const frameworkDescription = document.getElementById('framework-description');
 
-                <script>
-                    document.getElementById('fruitSelect').addEventListener('change', function() {
-                    // Ocultar todos los contenedores
-                    var containers = document.getElementsByClassName('container-5');
-                    for (var i = 0; i < containers.length; i++) {
-                        containers[i].style.display = 'none';
-                    }
+        const frameworkInfo = {
+            react: {
+                name: 'Área 1',
+                description: 'Poner lo que sea.',
+                logo: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=='
+            },
+            vue: {
+                name: 'Área 2',
+                description: 'Poner lo que sea.',
+                logo: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=='
+            },
+            angular: {
+                name: 'Área 3',
+                description: 'Poner lo que sea.',
+                logo: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=='
+            },
+            svelte: {
+                name: 'Área 4',
+                description: 'Poner lo que sea.',
+                logo: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=='
+            }
+        };
 
-                    // Mostrar el contenedor seleccionado
-                    var selectedValue = this.value;
-                    if (selectedValue) {
-                        var selectedContainer = document.getElementById(selectedValue + 'Container');
-                        if (selectedContainer) {
-                            selectedContainer.style.display = 'block';
-                            }
-                        }
-                    });
-                </script>
-            </div>
-        </section>
+        select.addEventListener('change', function() {
+            const selectedFramework = this.value;
+            if (selectedFramework) {
+                const info = frameworkInfo[selectedFramework];
+                frameworkName.innerHTML = `<img src="${info.logo}" alt="${info.name} logo" class="framework-logo">${info.name}`;
+                frameworkDescription.textContent = info.description;
+                infoContainer.style.display = 'block';
+            } else {
+                infoContainer.style.display = 'none';
+            }
+        });
+    </script>
+          </section>
 
         <section id="about" class="about">
             <div class="container">
@@ -371,61 +503,81 @@
         <section id="contact" class="contact">
             <div class="container-3">
                 <h2>Contáctanos</h2>
-                <h3>Enviar Datos | Gmail | WhatsApp</h3>
-                <h4>Con * es obligatorio</h4>
-                <form class="contact-form" action="https://formspree.io/f/xnnqqpda" method="post">
-                    <div class="form-group">
-                        <label for="name">Nombre*</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Correo*</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">No. de Teléfono*</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="_status">Estado* [Disponible/Ocupado]</label>
-                        <input type="_status" id="status" name="_status" optional>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje*</label>
-                        <textarea id="message" name="message" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-button">Enviar Mensaje</button>
-                </form>
-            </div>
-        </section>
-        <section id="contact2" class="contact2">
-            <div class="container-2">
-                <h2>O por nuestras Redes Sociales</h2>
-            </div>
-        </section>
-        <section id="contact2" class="contact2">
-            <div class="container-2">
+                <h3><span style="display: none;">Enviar Datos <span style="font-weight: bold;">|</span></span> <a style="color: white; text-decoration: none;" href="#social-networks">Gmail</a> | <a style="color: white; text-decoration: none;" href="#social-networks">WhatsApp</a></h3>
+                    <section style="display: none;">
+                        <h4>Con <span style="font-weight: bold;">*</span> es obligatorio</h4>
+                        <form class="contact-form" action="https://formspree.io/f/xnnqqpda" method="post">
+                            <div class="form-group">
+                                <label for="name">Nombre*</label>
+                                <input type="text" id="name" name="name" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Correo*</label>
+                                <input type="email" id="email" name="email" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">No. de Teléfono*</label>
+                                <input type="tel" id="phone" name="phone" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="_status">Estado* [Disponible/Ocupado]</label>
+                                <input type="_status" id="status" name="_status" disabled>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mensaje*</label>
+                                <textarea id="message" name="message" disabled></textarea>
+                            </div>
+                            <button type="submit" class="submit-button">Enviar Mensaje</button>
+                        </form>
+                    </section>
+                <h3>Nuestras Redes Sociales</h3>
+              <section id="social-networks"></section>
+                  <div class="container-2">
                     <button-2>
                         <a href="https://mailto:h.eliass1017@gmail.com" target="_blank">
-                            <img src="https://cdn.icon-icons.com/icons2/2631/PNG/512/gmail_new_logo_icon_159149.png" alt="Gmail Button" width="75" height="75">
+                            <img src="https://cdn.icon-icons.com/icons2/2631/PNG/512/gmail_new_logo_icon_159149.png" alt="Gmail Button" width="50" height="50">
                         </a>
                     </button-2>
                     <button-2>
                         <a href="https://wa.me/4181106552">
-                            <img src="https://cdn.icon-icons.com/icons2/729/PNG/512/whatsapp_icon-icons.com_62756.png" alt="WhatsApp Button 1" width="75" height="75">
+                            <img src="https://cdn.icon-icons.com/icons2/729/PNG/512/whatsapp_icon-icons.com_62756.png" alt="WhatsApp Button 1" width="50" height="50">
                         </a>
                     </button-2>
+                </div>
             </div>
         </section>
     </main>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="https://abogados-elias-y-pena.github.io/Image2/logo.png" alt="logo" width="75" height="75">
+            </div>
+            <ul class="nav-links1">
+                <li><a href="https://programmer-hugo.github.io/about-me/" target="_blank">Hecho por Hugo Elias</a></li>
+                <li><a href="politica-de-seguridad-de-la-informacion/" target="_blank">Política de Seguridad de la Información</a></li>
+              <li><a>&copy; 2025. Todos los Derechos Reservados.</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
 
-    <footer>
-        <div class="container-1">
-            <p>
-                <a href="https://programmer-hugo.github.io/about-me/" target="_blank">Hecho por Hugo Elias</a>
-            </p>
-            <p>&copy; 2025. Todos los Derechos Reservados. <a href="https://abogados-elias-y-pena.github.io/inicio-mobile-app/politica-de-seguridad-de-la-informacion/" target="_blank">Política de Seguridad de la Información</a></p>
-        </div>
-    </footer>
+            hamburger.addEventListener('click', function() {
+                this.classList.toggle('active');
+                navLinks.classList.toggle('show');
+            });
+
+            // Close menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    hamburger.classList.remove('active');
+                    navLinks.classList.remove('show');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
